@@ -1,0 +1,117 @@
+/* Pagina de calculos de custos de produtos e taxas!!
+Desenvolvido po Erasmo Cardoso.
+*/
+
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.programa{
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto;
+    margin: 2%;
+    margin-top: 0%;
+
+    grid-template-areas: "tit tit tit"
+                         "pro pro pro"
+                         "jur jur jur"
+                         "por por por"
+                         "res res res";
+}
+input{
+    border: 2px solid black;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    box-shadow: 5px 5px 5px 0px gray;
+    margin-bottom: 2%;
+    width: 15%;
+}
+
+button{
+    background-color: whitesmoke;
+    width: 60px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    box-shadow: 5px 5px 5px 0px gray;
+    border: 1px solid black;
+ }
+
+ :placeholder-shown{
+    color: rgba(0, 0, 0, 0.521);
+ }
+.menu{
+    grid-area: tit;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    box-shadow: 5px 5px 5px 0px gray;
+    border-radius: 0% 0% 20% 20%;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    
+}
+.produto{
+    grid-area: pro;
+    background-color: rgb(206, 214, 224);
+    border: 2px solid black;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    width: 100%;
+    height: auto;
+   
+    
+}
+.juros{
+    grid-area: jur;
+    background-color: rgb(206, 214, 224);
+    border: 2px solid black;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    width: 100%;
+    height: auto;
+}   
+.porcentagem{
+    grid-area: por;
+    background-color: rgb(206, 214, 224);
+    border: 2px solid black;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    width: 100%;
+    height: auto;
+    
+    
+}
+.resultado{
+    grid-area: res;
+    background-color: whitesmoke;
+    display: block;
+    width: auto;
+    height: auto;
+}
+.resultado h3{
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    margin-top: 8px;
+    
+}
+.resultado p{
+    display: block;
+    background-color: rgb(206, 214, 224);
+    text-align: center;
+    font-size: 130%;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    border: 1px solid black;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    padding: 20px;
+    margin: 6%;
+    margin-top: -1%;
+    max-width: 85%;
+    height: auto;
+
+    
+}

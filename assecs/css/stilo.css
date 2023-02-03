@@ -1,0 +1,1277 @@
+/*Conteudo CSS criado por Erasmo Cardoso*/
+/*Importando fontes para não ter diferenças em navegadores*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.body {
+    margin: 0px;
+    border: 0px;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+h3 {
+    font-family: 'Signika', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+A {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+  }
+/*Grid do conteudo do site*/
+.layout {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+
+    grid-template-areas: "logo logo logo"
+        "menu menu menu"
+        "foto foto foto"
+        "foto2 foto2 foto2"
+        "info info info"
+        "siapp siapp siapp"
+        "remo remo remo"
+        "orca orca orca"
+        "cont cont cont"
+        "roda roda roda"
+    ;
+}
+
+.layout {
+    display: block;
+
+}
+
+
+:target {
+    scroll-margin-top: 4.5em;
+
+
+}
+
+.topo {
+    z-index: 2;
+    grid-area: logo;
+    background-color: whitesmoke;
+    display: flex;
+    margin-top: -6px;
+    height: 80px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 0px gray;
+    border-radius: 0% 0% 20% 20%;
+
+
+}
+
+.topo .logotipo {
+    width: 80%;
+    align-items: center;
+}
+
+.topo .logotipo img {
+    display: flex;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 70px;
+
+}
+
+.topo .icones {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topo .icones img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+
+
+}
+
+.topo .icones img:hover {
+    -moz-transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+
+}
+
+.topo .icones h6 {
+    margin: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+.topo .icones h6:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.menu {
+    grid-area: menu;
+    z-index: 3;
+    height: 50px;
+    display: flex;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0px;
+    justify-content: center;
+    margin-top: 0px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 20% 20%;
+
+}
+
+.menu ul li {
+    display: block;
+    font-size: 100%;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    margin: 20px;
+    margin-top: 0%;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.1em;
+
+}
+
+.menu ul li:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+
+}
+
+
+.menu-mobile {
+    visibility: hidden;
+    display: none;
+}
+
+
+.fotodest {
+    grid-area: foto;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    height: auto;
+   
+
+
+}
+
+.fotodest img {
+    margin-top: 1%;
+    max-width: 45%;
+    height: auto;
+    margin: 4%;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 10% 10% 10% 10%;
+
+}
+
+.fotodest img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.fotodest .mensagenssaudacao h3 {
+    display: flex;
+    background-color: rgb(206, 214, 224);
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    border: 1px solid black;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    padding: 20px;
+    margin: 6%;
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+
+}
+
+.fotodest h3:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.fotodest .mensagenssaudacao {
+    display: block;
+    margin: auto;
+    padding: 1%;
+}
+
+.info {
+    grid-area: info;
+    margin-top: 60px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.info .info-filho1 {
+    width: 33%;
+    background-color: rgb(206, 214, 224);
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    margin-right: 25px;
+    padding: 2%;
+    border: 1px solid black;
+
+}
+
+.info .info-filho1 h3 {
+    word-break: break-all;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+.info h3:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.info .info-filho2 {
+    width: 33%;
+    padding: 2%;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    margin-right: 25px;
+    border: 1px solid black;
+
+
+}
+
+.info .info-filho2 img {
+    max-width: 80%;
+    height: 80%;
+    padding: 2px;
+    margin-right: 50%;
+    margin-left: 10%;
+
+
+}
+
+.info .info-filho2 img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+
+
+}
+
+.info .info-filho3 {
+    width: 33%;
+    padding: 2%;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    border: 1px solid black;
+
+}
+
+.info .info-filho3 img {
+    width: 350px;
+    height: 300px;
+    padding: 2px;
+
+
+}
+
+.info .info-filho3 img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.foto2 {
+    grid-area: foto2;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 5px;
+    justify-content: center;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+
+}
+
+.foto2 .foto2-filho1 {
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+
+
+}
+
+.foto2 .foto2-filho1 .carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+
+
+}
+
+.foto2 .foto2-filho1 .carrossel img {
+    display: flex;
+    object-fit: contain;
+    height: 400px;
+    width: 400px;
+
+
+
+}
+
+.foto2 .foto2-filho2 {
+    width: 800px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -10px;
+    margin-right: 70px;
+
+}
+
+.foto2 .foto2-filho2 h3 {
+    display: flex;
+    background-color: rgb(206, 214, 224);
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    border: 1px solid black;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 10px 10px 10px 10px gray;
+    padding: 20px;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 0px;
+
+}
+
+.foto2 .foto2-filho2 h3:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.siteapp {
+    grid-area: siapp;
+    margin-top: 60px;
+    display: flex;
+    height: 540px;
+    justify-content: center;
+
+
+}
+
+.siteapp .site {
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+    margin-right: 1%;
+    background-color: rgb(206, 214, 224);
+
+
+}
+
+.siteapp .site img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    margin-top: 3%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+.siteapp .site img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.siteapp .site h3 {
+    margin-top: 1%;
+    padding: 3%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+
+}
+
+.siteapp .app {
+    width: 50%;
+    margin-left: 1%;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+    background-color: rgb(206, 214, 224);
+}
+
+.siteapp .app img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    margin-top: 3%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+.siteapp .app img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.siteapp .app h3 {
+    padding: 3%;
+    margin-top: 6%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+
+.sremo {
+    grid-area: remo;
+    background-color: rgb(206, 214, 224);
+    margin-top: 60px;
+    display: block;
+    height: auto;
+    justify-content: center;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+
+}
+
+.sremo h3 {
+    padding: 5%;
+    margin-top: 0%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+.sremo h3:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sremo img {
+    max-width: 30%;
+    height: 30%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+.sremo img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.orc {
+    grid-area: orca;
+    background-color: rgb(206, 214, 224);
+    margin-top: 60px;
+    display: flex;
+    height: 540px;
+    justify-content: center;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+}
+
+.orc h3 {
+    padding: 3%;
+    margin-top: 5%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+.orc button {
+    background-color: white;
+    width: 105px;
+    height: 40px;
+    margin: 5%;
+    padding: 0%;
+    text-shadow: 0.1em 0.1em 0.2em rgb(5, 5, 5);
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 5px gray;
+    border-radius: 35% 0% 35% 0%;
+}
+
+.orc button:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgba(74, 74, 182, 0.637);
+    color: aliceblue;
+
+}
+.orc .orcar {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+
+
+}
+
+.orc .orcar img {
+    max-width: 90%;
+    height: 80%;
+    border-radius: 10%;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+.orc .orcar img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.orc .agen {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+}
+
+.orc .agen img {
+    max-width: 150%;
+    height: 80%;
+    border-radius: 10%;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+.orc .agen img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.estamos {
+    grid-area: cont;
+    margin-top: 60px;
+    display: flex;
+    height: 540px;
+    justify-content: center;
+
+}
+
+.estamos .fone {
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+    margin-right: 1%;
+    background-color: rgb(206, 214, 224);
+
+}
+
+.estamos .fone h4 {
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+.estamos .fone .imag {
+    display: flex;
+}
+
+.estamos .fone .imag img {
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: block;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px 10px gray;
+
+
+}
+
+
+.estamos .map {
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 0% 0% 5% 5%;
+    border: 1px solid black;
+    background-color: rgb(206, 214, 224);
+
+}
+
+.estamos .map iframe {
+    margin: 5%;
+    width: 90%;
+    height: 60%;
+    justify-items: auto;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 5%;
+}
+
+.estamos .map h3 {
+    margin-top: 2%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+.pag {
+    z-index: 1;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.pix-pc {
+    visibility: visible;
+    display: block
+}
+
+.pix-cel {
+    visibility: hidden;
+    display: none;
+}
+
+.pag-mob {
+    z-index: 1;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+
+.pag-content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+
+}
+
+.pag-content-mobile {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+.pag .pagback {
+    background-color: white;
+}
+
+
+.pag-mob .pagback-mobile {
+    background-color: white;
+    max-width: 100%;
+    height: auto;
+}
+
+.pag-mob .pagback-mobile h3 {
+    color: blue;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+.fechapag {
+    float: right;
+    width: 80px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+.fechapag-mobile {
+    float: right;
+    width: 90px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+.fechapag:hover {
+    background-color: darkgray;
+}
+
+.fechapag-mobile:hover {
+    background-color: darkgray;
+}
+
+.rodape {
+    grid-area: roda;
+    background-color: whitesmoke;
+    margin-top: 60px;
+    height: 280px;
+    display: flex;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px 10px gray;
+    border-radius: 5% 5% 0% 0%;
+}
+
+.rodape .contato {
+    display: block;
+    justify-content: center;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.527);
+
+
+
+}
+
+.rodape .contato h4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+}
+
+
+.rodape .contato .ico {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.rodape .contato .ico h4 {
+    display: flex;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+.rodape .contato .ico img {
+    display: flex;
+    margin-top: 2%;
+    margin: 5px 5px;
+    height: 40px;
+
+}
+
+.rodape .contato .ico img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.rodape .atalhos {
+    display: block;
+    justify-content: center;
+    padding: 2%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 20%;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    border-right: 1px solid rgba(0, 0, 0, 0.527);
+    cursor: pointer;
+}
+
+.rodape .atalhos li {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.rodape .somos {
+    display: block;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    width: 35%;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+    border-right: 1px solid rgba(0, 0, 0, 0.527);
+}
+
+.rodape .prop {
+    display: block;
+    justify-content: center;
+    width: 25%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.rodape .prop img {
+    border-radius: 10%;
+
+    width: 95%;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 10px 10px gray;
+
+
+}
+
+.rodape .prop h5 {
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgb(92, 90, 90);
+
+}
+
+/* adaptação media query */
+
+
+/*Conteudo para telas pequenas mobile*/
+@media only screen and (max-width : 860px) {
+
+    .layout {
+
+        grid-template-areas: "logo logo"
+            "menu menu"
+            "foto foto"
+            "foto2 foto2"
+            "info info"
+            "siapp siapp"
+            "remo remo"
+            "orca orca"
+            "cont cont"
+            "roda roda"
+        ;
+    }
+
+    .topo {
+        height: 70px;
+    }
+
+    .topo .logotipo {
+        width: 60%;
+        align-items: flex-start;
+
+
+    }
+
+    .topo .icones {
+        width: 40%;
+
+
+    }
+
+    .topo .logotipo img {
+        width: 90px;
+        height: 60px;
+
+
+    }
+
+    .topo .icones {
+
+        margin: 5px;
+    }
+
+    .topo .icones img {
+        align-items: flex-end;
+        width: 25px;
+        height: 25px;
+
+    }
+
+    .topo .icones h6 {
+        display: none;
+    }
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .menu ul li {
+        display: none;
+    }
+
+
+    .menu-mobile {
+        display: block;
+        position: sticky;
+        height: 55px;
+        z-index: 3;
+        width: 100%;
+        position: sticky;
+        top: 5px;
+        margin-top: -50px;
+        margin-left: -0.75%;
+        cursor: pointer;
+        visibility: visible;
+        border: 2px solid black;
+        box-shadow: 10px 10px 10px 10px gray;
+        text-shadow: 0.2em 0.2em 0.3em rgb(92, 90, 90);
+        font-size: 100%;
+        border-radius: 0% 0% 20% 20%;
+
+    }
+
+    .title {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: whitesmoke;
+        padding: 15px;
+        border-radius: 0% 0% 20% 20%;
+        position: relative;
+        box-shadow: 0 0 40px -10px #000;
+        color: #030303;
+        text-align: center;
+        font-size:larger
+    }
+
+    span {
+        float: right;
+        font-size: 18px !important
+    }
+
+    .dropdown {
+        width: 100%;
+        background-color: whitesmoke;
+        border-radius: 0% 0% 5% 5%;
+        border: 1px solid black;
+        box-shadow: 0 0 40px -10px #000;
+        color: #505050;
+        margin-top: 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s;
+        text-align: center;
+    }
+
+    .down {
+        max-height: 400px
+    }
+
+    .arrow {
+        text-shadow: 0.2em 0.2em 0.3em rgb(92, 90, 90);
+        position: absolute;
+        right: 20px;
+        bottom: -75px;
+        display: none;
+        font-weight: bold;
+        
+
+    }
+
+    .arrow.gone {
+        display: block
+    }
+
+    li {
+        padding: auto auto;
+        margin: 20px;
+        transition: all .1s;
+        list-style-type: none;
+        font-size: 1.3em;
+    }
+
+    li:hover {
+        background: rgb(156, 156, 247);
+
+        color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 30px -10px #000;
+    }
+
+    .fotodest {
+        display: block;
+        align-items: center;
+
+    }
+
+    .fotodest img {
+        pointer-events: none;
+        max-width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+
+    .fotodest .mensagenssaudacao h3 {
+        margin-right: 1%;
+        margin-left: 1%;
+        pointer-events: none;
+
+    }
+
+    .info {
+        display: block;
+        height: auto;
+
+        pointer-events: none;
+    }
+
+    .info .info-filho1 {
+        width: 93%;
+        padding: 3%;
+        
+
+    }
+    .info .info-filho1 h3{
+        padding: 3%;
+    }
+
+    .info .info-filho2 {
+        width: 95%;
+        margin-top: 5%;
+
+    }
+
+
+    .info .info-filho2 img {
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        pointer-events: none;
+       
+    }
+
+    .info .info-filho3 {
+        display: none;
+        visibility: hidden;
+        
+    }
+   
+
+    .foto2 {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: 1%;
+        pointer-events: none;
+    }
+
+    .foto2 .foto2-filho1 {
+        margin: auto;
+        
+        
+    }
+
+    .foto2 .foto2-filho1 .carrossel img {
+        margin-top: 2%;
+        max-width: 400px; 
+        height: auto;
+        
+    }
+
+
+    .foto2 .foto2-filho2 {
+        align-items: center;
+        max-width: 100%;
+        margin-left: 1%;
+
+        pointer-events: none;
+
+    }
+
+    .sremo {
+        margin: 2%;
+        margin-top: 10%;
+        height: auto;
+    }
+
+    .sremo img {
+        display: none;
+
+    }
+
+    .orc {
+        max-width: 100%;
+        height: auto;
+        margin: 2%;
+
+    }
+
+    .orc h3 {
+        padding: 10%;
+        text-align: center;
+
+    }
+
+    .orc .orcar img {
+        display: none;
+
+    }
+
+    .orc .agen img {
+        display: none;
+    }
+
+    .siteapp {
+        max-width: 100%;
+        display: block;
+        height: auto;
+        margin: auto;
+        margin-top: 10%;
+
+    }
+
+    .siteapp .site {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+    }
+
+    .siteapp .app {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+
+    }
+
+    .estamos {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .estamos .fone {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 2%;
+    }
+
+    .estamos .map {
+        width: 100%;
+        height: auto;
+        margin-top: 2%;
+        margin: auto;
+    }
+
+    .pix-pc {
+        visibility: hidden;
+        display: none;
+    }
+
+    .pix-cel {
+        visibility: visible;
+        display: block
+    }
+
+    .rodape {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .rodape .contato {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+        border: 0px;
+    }
+
+    .rodape .atalhos {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+        text-align: center;
+        border: 0px;
+    }
+
+    .rodape .somos {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+        border: 0px;
+    }
+
+    .rodape .prop {
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+    }
+
+    .rodape .prop img {
+        max-width: 50%;
+        height: auto;
+        margin-left: 25%;
+
+    }
+
+}
