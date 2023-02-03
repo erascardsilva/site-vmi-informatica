@@ -1,0 +1,322 @@
+<!--Site criado e por Erasmo Cardoso da Silva-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <!--Mediaquery responsivo-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <!--icone png do site-->
+  <link rel="icon" type="imagem/png" href="./assecs/icon/vmi.png" />
+  <!--link para css e javascript-->
+  <link rel="stylesheet" href="./assecs/css/stilo.css">
+  <script src="./assecs/js/config.js" defer></script>
+  <title> " VMI Info|Assistência. "</title>
+</head>
+
+<body>
+  <!--Inicio menu topo logo e atalhos-->
+  <a name="home"></a>
+  <div class="layout">
+    <div class="topo">
+      <div class="logotipo">
+        <img src="./assecs/icon/vmi.png" alt="">
+      </div>
+      <div class="icones">
+        <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+        %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">
+          <img src="./assecs/icon/whats.png" alt="">
+          <h6>Whats</h6>
+        </a>
+        <a href="mailto:erasmo@vmi-informatica.com.br">
+          <img src="./assecs/icon/email.png" alt="">
+          <h6>E-mail</h6>
+        </a>
+        <a href="tel:+5511981916975">
+          <img src="./assecs/icon/fone.png" alt="">
+          <h6>Phone</h6>
+        </a>
+      </div>
+    </div>
+    <!--Navegação ou menu para computador-->
+    <div class="menu">
+      <ul>
+        <li><a href="#home"> Home </a> </li>
+        <li><a href="#servicos"> Serviços </a></li>
+        <li><a href="#software">App & Site </a></li>
+        <li><a href="#suporte"> Suporte</a></li>
+        <li><a href="#orcar"> Orçamento </a></li>
+        <li><a href="#contato"> Contato </a></li>
+        <li><a href="#somos"> Quem Somos</a></li>
+      </ul>
+    </div>
+    <!--Navegação ou menu para celular e afins-->
+    <div class="menu-mobile">
+      <div class="title" onclick="f()">&#x2630; Menu<span class="fa fa-bars"></span>
+        <div class="arrow">
+          <h2>&#10008;</h2>
+        </div>
+      </div>
+      <div class="dropdown">
+        <ul>
+          <li><a href="#home">&#x2302; Home</a> </li>
+          <li><a href="#servicos"> &#x23E3; Serviços</a><span class="fa fa-inbox"></span></li>
+          <li><a href="#software"> &#x2394; App & Site</a></li>
+          <li><a href="#suporte"> &#x1F4BB; Suporte</a></li>
+          <li><a href="#orcar"> &#x1F4B5; Orçamento</a></li>
+          <li><a href="#contato">&#x1F4F1;Contato</a></li>
+          <li><a href="#somos"> &#x1F464; Quem Somos</a></li>
+
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <!--Conteudo inicial-->
+    <div class="fotodest">
+      <div class="mensagenssaudacao"> <br>
+        <h3 id="mensagem"> </h3>
+        <h3>
+          Somos especializados em reparos de notebook, computadores, monitores, pc-all-in-one,
+          suporte remoto, instalação de softwares, formatação e backup<br> <br>
+          Criação de Softwares e Sites..</h3>
+      </div>
+      <img src="./assecs/img/preocessador-min.jpg" alt="">
+
+
+
+    </div>
+
+
+    <div class="info">
+      <div class="info-filho1">
+        <h3>
+          <p> A VMI Informática<br> <br>
+            É uma empresa especializada na manutenção de computadores,
+            placas-mãe entre outros. Também fornecemos os serviços de upgrade,
+            manutenção preventiva e instalação de sistema. Consulte a possibilidade
+            do reparo da placa-mãe de seu computador e economize. <br> <br>
+            <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+            %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">Consulte -nos</a>
+        </h3>
+        </p>
+
+      </div>
+      <div class="info-filho2">
+        <img src="./assecs/img/comp.png " alt="">
+      </div>
+
+      <div class="info-filho3">
+        <img src="./assecs/img/note-min.jpg " alt="">
+      </div>
+    </div>
+
+    <div class="foto2" id="servicos">
+      <div class="foto2-filho2">
+
+        <h3>
+          <p> Serviços de Informática <br>
+            <br> A VMI Informática é especializada em manutenção de equipamentos de informática,
+            utilizando nos serviços vocês terão a sua disposição um técnico em eletrônica
+            com especialidades em informática. Fazemos reparos em placas, só as substituímos quando
+            o reparo é considerado inviável, sendo assim você terá sempre o menor custo na manutenção
+            dos seus equipamentos.Somos especializados em notebooks, computadores, monitores,
+            no breaks entre outros.. <br> <br>
+
+            <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+              %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank"> Consulte-nos….</a>
+        </h3>
+        </p>
+
+
+      </div>
+      <!--carrossel em javascript-->
+      <div class="foto2-filho1">
+        <div class="carrossel" id="img">
+          <img src="./assecs/img/slide002.jpg" alt="">
+          <img src="./assecs/img/computador.jpg" alt="">
+          <img src="./assecs/img/monitor.jpg" alt="">
+          <img src="./assecs/img/allinone.jpg" alt="">
+          <img src="./assecs/img/winlinu.jpg " alt="">
+          <img src="./assecs/img/ssdnvme.jpg " alt="">
+          <img src="./assecs/img/memorddr4.jpg " alt="">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="siteapp" id="software">
+      <div class="site">
+        <img src="./assecs/img/htmlcssjava.jpg " alt="">
+        <h3>
+          <p> Sites <br>
+            <br>Hoje em dia, ter um site personalizado,
+            com certeza e um diferencial. Personalizamos o seu site,
+            com a cara da sua empresa. O seu site será feito manualmente,
+            utilizando HTML5, CSS e Javascript, sendo diferente de empresas que
+            utilizam ferramentas de criação… <br>
+            <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+            %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">Consulte-nos….</a>
+          </p>
+        </h3>
+
+
+      </div>
+      <div class="app">
+        <img src="./assecs/img/soffot.jpg  " alt="Desenvolvimento de software">
+        <h3>
+          <p> Ter um software personalizado para facilitar suas vendas ou ajudar
+            na divulgação da sua empresa, e um diferencial nos dias de hoje.
+            E ter um software de gerenciamento e controle para os serviços, vendas,
+            estoque e finanças da sua empresa é uma necessidade nos dia de hoje.
+            Nos criamos o seu software de forma manual, utilizando a linguagem de programação
+            mais ideal para a sua necessidade <br> <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+            %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank"> Consulte-nos … </a>
+          </p>
+
+        </h3>
+      </div>
+    </div>
+
+    <div class="sremo" id="suporte">
+      <img src="./assecs/img/suporte-remoto.jpg " alt="">
+      <h3> Suporte remoto <br> <br>
+        Dependendo do problema de informática que você está enfrentando,
+        podemos resolver via suporte remoto, diminuindo os custos e se tornando
+        muito mais rápido que um atendimento presencial.
+        Entre em contato agora mesmo para verificarmos a possibilidade da solução
+        do problema por atendimento remoto.. <br> <br>
+        <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+        %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">Consulte-nos</a>
+      </h3>
+
+
+
+    </div>
+    <div class="orc" id="orcar">
+      <div class="orcar">
+        <img src="./assecs/img/Agendar.jpeg " alt="">
+
+      </div>
+
+
+      <h3>
+        <p>Orçamentos <br> </p>
+        Por aqui você poderá acompanhar o status do reparo do equipamento.
+        Ou nos chame pelos nossos canais de atendimento.. <br>
+
+        <a href="https://api.whatsapp.com/send/?phone=5511981916975&text=Td+bem+
+        preciso+agendar+um+or%C3%A7amento+vc+pode+me+ajudar...&type=phone_number&app_absent=0"
+          target="_blank"><button>Agendar</button></a>
+        <a href="https://vmi-informatica.com.br/os/index.php/mine" target="blank">
+          <button>Verificar</button></a> <br> <br>
+
+        Agende ou verifique o status do seu equipamento.
+      </h3>
+
+    </div>
+    <div class="estamos" id="contato">
+      <div class="fone">
+        <div class="imag">
+          <img src="./assecs/img/contatos.png" alt="">
+        </div>
+
+        <h4>
+          Nossos horários de atendimento : <br> <br>
+          Segunda a Sexta <br>
+          das 9:00 hs as 18:00 hs <br> <br>
+          Sábados <br>
+          das 9:00 hs as 12:00 hs <br> <br>
+          Consute-nos <br> <br>
+          <li> <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+            %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">
+              Fone|Whats (11) 98191-6975</a></li>
+          <li>E-mail: erasmo@vmi-informatica.com.br</li>
+        </h4>
+
+      </div>
+      <div class="map">
+        <h3>Onde estamos <br> Entre em contato antes de vir até a VMI </h3><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3
+        !1d1829.2818937320733!2d-46.39198684204685!3d-23.512216446176822!
+        2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce648fe1dff
+        5b1%3A0x42e0bb044d746a82!2sR.%20Manuel%20Nunes%20Figueira%20
+        -%20Chacara%20Dona%20Olivia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008141-300
+        !5e0!3m2!1spt-BR!2sbr!4v1662167073920!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <!--conteudo para pagamento pix em computador-->
+    <div class="pag" id="pag">
+      <div class="pagback">
+        <img src="./assecs/img/pix.png " alt="">
+        <button class="fechapag" onclick="fechapag()">Fechar</button>
+      </div>
+    </div>
+    <!--conteudo para pagamento pix em celular-->
+    <div class="pag-mob" id="pag-mob">
+      <div class="pagback-mobile">
+        <h3>CNPJ : 09068209/0001-61</h3>
+        <img src="./assecs/img/pix-mobile.png " alt="">
+        <button class="fechapag-mobile" onclick="fechapagmobile()">Fechar</button>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <div class="contato">
+        <h4>Redes Sociais | Contatos</h4>
+        <div class="ico">
+          <a href="https://api.whatsapp.com/send?phone=5511981916975e&text=Oi%20tudo%20bom
+              %20peguei%20seu%20contato%20na%20internet%20poderia%20me%20ajudar?" target="_blank">
+            <img src="./assecs/icon/whats.png" alt=""></a>
+          <a href="mailto:erasmo@vmi-informatica.com.br">
+            <img src="./assecs/icon/email.png" alt=""></a>
+          <a href="tel:+5511981916975">
+            <img src="./assecs/icon/fone.png" alt=""></a>
+        </div>
+        <h4>
+          <p>Tel/Whats : <br> (11) 98191-6975 <br> <br>
+            CNPJ : <br> 09068209/0001-61 <br> <br></p>
+        </h4>
+      </div>
+      <!--links-->
+      <div class="atalhos">
+        <a class="pix-cel" onclick="showpagmobile()">
+          <li>Pagamentos</li>
+        </a>
+        <a class="pix-pc" onclick="showpag()">
+          <li>Pagamentos</li>
+        </a>
+        <a href="#servicos">
+          <li>Serviços</li>
+        </a>
+        <a href="https://download.anydesk.com/AnyDesk.exe">
+          <li>Download Any-Desk</li>
+        </a>
+        <a href="https://vmi-informatica.com.br/os/index.php/login" target="_blank">
+          <li>Sistema O.S.</li>
+        </a>
+        <a href="#orcar">
+          <li>Orçamentos</li>
+          <a href="calcula.html" target="_blank">
+            <li>Cálculos</li>
+          </a>
+      </div>
+
+      <div class="somos" id="somos">
+        <h4>Quem Somos <br> <br>
+          A VMI Informática esta há mais de 17 anos prestando serviços na área de informática e eletrônica,
+          tanto para cliente empresa ou clientes finais. Presamos por um serviço justo, e de qualidade. </h4>
+      </div>
+      <div class="prop">
+        <img src="./assecs/img/sitecod.jpg " alt="">
+        <h5>Site criado <br>
+          Em agosto de 2022 por Erasmo Cardoso (VMI Informática).
+          Fotos meramente ilustrativas.</h5>
+      </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
