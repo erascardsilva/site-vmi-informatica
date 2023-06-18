@@ -1,6 +1,6 @@
 # site-vmi-informatica
 
-Site criado em HTML CSS e Javascripty
+Site criado em HTML CSS e Javascript
 
 link
 
