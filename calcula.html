@@ -1,51 +1,156 @@
 <!DOCTYPE html>
+<!-- Site criado/modernizado por Erasmo Cardoso da Silva - Dev -->
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./assecs/css/config.css">
-    <script src="./assecs/js/calc.js" defer></script>
-    <title>Calculos </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora VMI | Ferramentas</title>
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Moderno -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./assecs/icon/vmi.png" />
+
+    <style>
+        /* Estilos específicos para a calculadora */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .result-box {
+            grid-column: 1 / -1;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="programa">
-        <div class="menu">
-            <h1>"Cálculos"</h1>
+
+    <!-- Header Simples -->
+    <header style="position: relative; margin-bottom: 20px;">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="./assecs/icon/vmi.png" alt="VMI Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Voltar ao Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container section">
+        <h1 style="text-align: center;">Ferramentas de Cálculo</h1>
+
+        <div class="result-box">
+            <h3 style="margin-bottom: 10px; color: var(--primary-color);">Resultados</h3>
+            <div id="resultado">Os resultados aparecerão aqui...</div>
         </div>
 
-        <div class="produto">
-            <h3>Valor de Venda </h3>
-            <input type="" id="vproduto" placeholder="Valor">
-            <button onclick="vvenda();apagaForm()">Calcular</button>
+        <div class="calc-grid">
+            <!-- Vendas -->
+            <div class="card">
+                <h3><i class="fas fa-tag"></i> Formação de Preço</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Custos + Margem + Impostos
+                </p>
+
+                <div class="form-group">
+                    <label>Valor de Custo (R$)</label>
+                    <input type="number" id="vproduto" placeholder="Ex: 100.00">
+                </div>
+
+                <button onclick="vvenda();" class="btn" style="width: 100%">Calcular Preço</button>
+            </div>
+
+            <!-- Taxas Maquininha -->
+            <div class="card">
+                <h3><i class="fas fa-credit-card"></i> Simular Parcelamento</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Simulação de Taxas (1x a
+                    10x)</p>
+
+                <div class="form-group">
+                    <label>Valor da Venda (R$)</label>
+                    <input type="number" id="valorparc" placeholder="Ex: 500.00">
+                </div>
+                <div class="form-group">
+                    <label>Nº Parcelas</label>
+                    <input type="number" id="nparce" placeholder="1 a 10">
+                </div>
+
+                <button onclick="parcela();" class="btn" style="width: 100%">Calcular Taxas</button>
+            </div>
+
+            <!-- Porcentagem -->
+            <div class="card">
+                <h3><i class="fas fa-percentage"></i> Calculadora %</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Acréscimos e Descontos</p>
+
+                <div class="form-group">
+                    <label>Valor Base</label>
+                    <input type="number" id="vporc" placeholder="Ex: 200">
+                </div>
+                <div class="form-group">
+                    <label>Porcentagem (%)</label>
+                    <input type="number" id="qporc" placeholder="Ex: 10">
+                </div>
+
+                <button onclick="vporc();" class="btn" style="width: 100%">Calcular %</button>
+            </div>
         </div>
 
-        <div class="juros">
-            <h3 for="">Valor crédito</h3>
-
-            <input type=" " id="valorparc" placeholder="Valor">
-            <input type=" " id="nparce" placeholder="Parcelas">
-            <button onclick="parcela();apagaForm()">Calcular</button>
+        <div style="text-align: center; margin-top: 40px;">
+            <button onclick="apagaForm(); document.getElementById('resultado').innerHTML = 'Limpo!';"
+                class="btn-outline">Limpar Campos</button>
         </div>
-
-        <div class="porcentagem">
-            <h3 for="">Porcentagem </h3>
-            <input type=" " id="vporc" placeholder="Número">
-            <input type=" " id="qporc" placeholder="%">
-            <button onclick="vporc();apagaForm()">Calcular</button>
-        </div>
-        <div class="resultado">
-            <h3>Resultados : </h3>
-            <p id="resultado" class="resultado"> Resultados aqui !!! </p>
-
-
-        </div>
-
 
     </div>
 
+    <!-- Script -->
+    <script src="./js/calc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 
 </html>

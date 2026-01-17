@@ -1,0 +1,303 @@
+/* CSS Moderno - VMI Informática v2.0 */
+/* Autor: Erasmo Cardoso - Dev */
+
+:root {
+    /* Paleta de Cores - Tema Dark Premium */
+    --primary-color: #00d4ff;
+    /* Ciano Vibrante */
+    --secondary-color: #7000ff;
+    /* Roxo Neon */
+    --accent-color: #ff007a;
+    /* Rosa Choque detalhes */
+    --bg-color: #0a0a0a;
+    /* Quase preto */
+    --bg-card: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism base */
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+
+    /* Gradientes */
+    --gradient-main: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+
+    /* Espaçamentos e Bordas */
+    --border-radius: 16px;
+    --transition-speed: 0.3s;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-speed);
+}
+
+/* Utilitários de Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+/* Botões Modernos */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: var(--gradient-main);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: #000;
+}
+
+/* Header / Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    z-index: 1000;
+    border-bottom: var(--glass-border);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    /* Efeito "Tech" com formato < > (Raios) */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0) 100%);
+    padding: 15px 60px;
+    /* Aumentado para expandir a área branca */
+    /* Formato pontiagudo nas laterais < > */
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    color: #fff;
+    /* Volta para branco */
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    /* Volta para branco */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle at 20% 50%, rgba(112, 0, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.15), transparent 40%);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    /* Reduzido de 3.5rem para ficar menos agressivo */
+    margin-bottom: 20px;
+    line-height: 1.3;
+    /* Aumentado para melhor leitura */
+    font-weight: 800;
+    /* Mais peso para definição */
+}
+
+.hero p {
+    font-size: 1.1rem;
+    /* Levemente menor */
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero span {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Standard property added */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    /* Evita quebras estranhas no gradiente */
+}
+
+/* Cards (Serviços e Info) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    /* Ligeiramente mais claro */
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    padding: 50px 0;
+    text-align: center;
+    border-top: var(--glass-border);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    /* P/ ícones pretos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        /* Reduzido no mobile também */
+    }
+}
