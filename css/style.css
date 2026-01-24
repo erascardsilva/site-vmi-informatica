@@ -300,4 +300,27 @@ footer {
         font-size: 2rem;
         /* Reduzido no mobile também */
     }
+
+    /* Ajuste de Layout Mobile: Foto e Texto sem concorrência */
+    /* Força colunas únicas e reordena para Foto em cima -> Texto embaixo */
+
+    #sobre .card-grid,
+    #manutencao .card-grid,
+    #suporte .card-grid,
+    #software .card-grid {
+        grid-template-columns: 1fr !important;
+        /* Prioridade sobre o inline style */
+        display: flex !important;
+        flex-direction: column;
+        gap: 40px !important;
+    }
+
+    /* Seções seguem a ordem do HTML (Web Pattern) ao empilhar */
+
+
+    /* Ajuste de largura das imagens para ocupar tudo no mobile */
+    .card-grid img {
+        max-width: 100% !important;
+        width: 100%;
+    }
 }
